@@ -25,10 +25,10 @@ pageSchema = {
         // }
     },
     // A string containing a concatenated form of all text strings from this page
-    textContent: {
-        type: Sequelize.TEXT,
-        allowNull: false
-    },
+   
+    keywords: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
+    }
     // The status code returned upon retrieving this page
 }
 
@@ -46,6 +46,9 @@ const QueueItem = db.define('queueItem', {
                 // perhaps add order
             })
               .then(instance => {
+                  if (!instance){
+                      throw new Error("queue is empty")
+                  }
                 return Promise.all([
                     instance,
                     instance.destroy()
