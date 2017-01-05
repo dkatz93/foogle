@@ -1,0 +1,1 @@
+exports.interval = 300;

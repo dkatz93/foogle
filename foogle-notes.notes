@@ -1,0 +1,18 @@
+goals:
+	each site: 
+	- a tags
+	- meta data from head
+	- h1, h2 (various heading tags)
+	- text
+	- most used words over 5 characters (ignore super common words)
+		- proper nouns 
+
+
+one group:
+- figures out algorithm to parse this in site
+
+
+other group:
+- figures out what to do with the information
+	- date (last crawled)
+
